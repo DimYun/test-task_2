@@ -1,0 +1,50 @@
+project_name: 'first_breaks'
+experiment_name: 'exp1'
+monitor_metric: 'val_iou'
+monitor_mode: 'max'
+
+
+seg_losses:
+  -
+    name: 'bce'
+    weight: 0.2
+    loss_fn: 'segmentation_models_pytorch.losses.SoftBCEWithLogitsLoss'
+    loss_kwargs: {smooth_factor: 0.1}
+  -
+    name: 'dice'
+    weight: 0.4
+    loss_fn: 'segmentation_models_pytorch.losses.DiceLoss'
+    loss_kwargs: {mode: 'binary', from_logits: true}
+  -
+    name: 'boundary_dou'
+    weight: 0.4
+    loss_fn: 'src.dist_losses.BoundaryDoULoss'
+    loss_kwargs: {n_classes: 1}
+
+
+data_config:
+  data_path: 'data/spec_1'
+  batch_size: 16
+  n_workers: 12
+  valid_size: 0.2
+  test_size: 0.1
+  n_classes: 1
+  width: 256
+  height: 256
+
+
+train_config:
+  n_epochs: 100
+  accelerator: 'gpu'
+  device: '0'
+  model_type: 'segmentation_models_pytorch.Unet'
+  encoder_name: 'tu-mobilenetv4_conv_large'
+  encoder_weights: 'imagenet'
+  optimizer: 'torch.optim.AdamW'
+  optimizer_kwargs:
+    lr: 1e-3
+    weight_decay: 1e-5
+  scheduler: 'torch.optim.lr_scheduler.CosineAnnealingLR'
+  scheduler_kwargs:
+    T_max: 10
+    eta_min: 1e-5
