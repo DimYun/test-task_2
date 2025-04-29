@@ -1,5 +1,5 @@
 project_name: 'first_breaks'
-experiment_name: 'exp1'
+experiment_name: 'exp6'
 monitor_metric: 'val_iou'
 monitor_mode: 'max'
 
@@ -23,14 +23,14 @@ seg_losses:
 
 
 data_config:
-  data_path: 'data/spec_1'
-  batch_size: 16
-  n_workers: 12
+  data_path: 'data/spec_4'
+  batch_size: 8
+  n_workers: 10
   valid_size: 0.2
-  test_size: 0.1
+  test_size: 0.2
   n_classes: 1
-  width: 256
-  height: 256
+  width: 420
+  height: 420
 
 
 train_config:
