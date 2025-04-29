@@ -71,7 +71,7 @@ The following improvements are suggested for future work:
 
 ## References
 
-* [Presentation: "The \"First Breaks\" identification algorithm" - Dr. Dmitrii Iunovidov]([Dmitrii-Iunovidov_first-break.pdf](Dmitrii-Iunovidov_first-break.pdf))
+* [Presentation: "The \"First Breaks\" identification algorithm" - Dr. Dmitrii Iunovidov](Dmitrii-Iunovidov_first-break.pdf)
 * Exploratory Data Analyses in [EDA.ipynb](notebooks/EDA.ipynb)
 * Dataset creation in [Create_Datasets.ipynb](notebooks/Create_Datasets.ipynb)
 * Solutions evaluation in [Models_Evaluation_and_Inference.ipynb](notebooks/Models_Evaluation_and_Inference.ipynb)
