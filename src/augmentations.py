@@ -27,9 +27,9 @@ def get_transforms(
             [
                 albu.HorizontalFlip(p=0.3),
                 albu.CoarseDropout(
-                    num_holes_range=(20, 60),
-                    hole_height_range=(5, 15),
-                    hole_width_range=(5, 15),
+                    num_holes_range=(1, 10),
+                    hole_height_range=(1, 10),
+                    hole_width_range=(1, 10),
                 ),
                 albu.OneOf(
                     [
