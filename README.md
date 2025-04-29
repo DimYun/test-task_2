@@ -10,6 +10,7 @@ analyze seismic traces and 2D spectrograms.
 The project was developed by Dr. Dmitrii Iunovidov, who has over 10 years of experience in R&D, machine learning, and 
 innovative technology implementation in chemical industry.
 
+* Project presentation: ["The \"First Breaks\" identification algorithm"](Dmitrii-Iunovidov_first-break.pdf)
 * [Dmitrii's Website](https://dimyun.space/)
 * [Dmitrii's LinkedIn](https://www.linkedin.com/in/dmitrii-iunovidov)
 
